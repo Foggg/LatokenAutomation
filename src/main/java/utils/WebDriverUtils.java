@@ -52,10 +52,10 @@ public class WebDriverUtils {
         driver.findElement(LatokenSite.storj).click();
     }
 
-    public static void checkSpreadHigherThen0() {
+    public static void checkSpreadHigherThen(int compare) {
         String spread = driver.findElement(LatokenSite.spread).getText();
         System.out.println(spread);
-        hardAssert.assertTrue(Double.parseDouble(spread) >= 0, "Spread is less or equal than 0");
+        hardAssert.assertTrue(Double.parseDouble(spread) >= compare, "Spread is less or equal than 0");
     }
 
     public static void login(){

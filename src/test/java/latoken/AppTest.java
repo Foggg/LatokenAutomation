@@ -1,6 +1,5 @@
 package latoken;
 
-import constants.PropertyConfigs;
 import org.testng.annotations.Test;
 import utils.WebDriverUtils;
 
@@ -30,7 +29,7 @@ public class AppTest extends WebDriverUtils {
         searchForPair("STORJ", "USDT");
 
         //Check for a spread and insert to the console
-        checkSpreadHigherThen0();
+        checkSpreadHigherThen(0);
 
         //Click login button and check for the modal window
         login();
